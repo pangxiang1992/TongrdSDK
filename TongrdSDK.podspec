@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TongrdSDK"
-  s.version      = "3.0.0"
+  s.version      = "3.0.1"
   s.summary      = "同道iOS SDK Cocoa Pods集成库"
 
   s.description  = <<-DESC
@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  #s.source_files  = "TongDaoSDK.framework/*"
+  s.source_files  = "TongDaoUILibrary.framework/Headers/TongDaoUiCore.h"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
