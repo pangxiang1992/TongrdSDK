@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TongrdSDK"
-  s.version      = "3.0.1"
+  s.version      = "3.0.3"
   s.summary      = "同道iOS SDK Cocoa Pods集成库"
 
   s.description  = <<-DESC
@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/pangxiang1992/TongrdSDK.git", :tag => "3.0.0" }
+  s.source       = { :git => "https://github.com/pangxiang1992/TongrdSDK.git", :tag => "3.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.preserve_paths = "TongDaoSDK.framework,TongDaoUILibrary.framework"
+  s.preserve_paths = "TongDaoUILibrary.framework"
   # s.ios.vendored_library = "TongDaoSDK.framework"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
