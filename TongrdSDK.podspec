@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TongrdSDK"
-  s.version      = "3.0.3"
+  s.version      = "3.0.4"
   s.summary      = "同道iOS SDK Cocoa Pods集成库"
 
   s.description  = <<-DESC
@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/pangxiang1992/TongrdSDK.git", :tag => "3.0.3" }
+  s.source       = { :git => "https://github.com/pangxiang1992/TongrdSDK.git", :tag => "3.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -87,7 +87,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TongDaoUILibrary.framework/Headers/TongDaoUiCore.h"
+  #s.source_files  = "TongDaoUILibrary.framework/Headers/TongDaoUiCore.h"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -102,10 +102,13 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+   s.resources = "Td_Image_bundle/*.png"
 
-  s.preserve_paths = "TongDaoUILibrary.framework"
-  # s.ios.vendored_library = "TongDaoSDK.framework"
+
+  s.preserve_paths = "Frameworks/*.framework"
+  s.vendored_frameworks = 'TongDaoUILibrary.framework', 'TongDaoSDK.framework'
+
+
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -115,7 +118,7 @@ Pod::Spec.new do |s|
 
   #s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-  s.frameworks = 'SystemConfiguration', 'CFNetwork','CoreTelephony','CoreLocation','AVFoundation','CoreBluetooth','UIKit','Security'
+  #s.frameworks = 'SystemConfiguration', 'CFNetwork','CoreTelephony','CoreLocation','AVFoundation','CoreBluetooth','UIKit','Security'
   s.ios.frameworks = 'SystemConfiguration', 'CFNetwork','CoreTelephony','CoreLocation','AVFoundation','CoreBluetooth','UIKit','Security'
   # s.library   = "sqlite3"
   s.ios.libraries = 'c++','z'
