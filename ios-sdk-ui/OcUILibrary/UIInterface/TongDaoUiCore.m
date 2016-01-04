@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "TongDaoUiCore.h"
 #import "TdPromotionContainer.h"
-#import "MBProgressHUD.h"
+#import "TongDaoMBProgressHUD.h"
 #import "ViewTool.h"
 #import "TdInAppMessageView.h"
 #import "TdInAppMessageFullView.h"
@@ -49,8 +49,13 @@ static TongDaoUiCore* sharedManager = nil;
 -(BOOL)initSdkWithAppKey:(NSString *)appKey
 {
     return [TongDao initSdkWithSdk:appKey];
+  
+
 }
 
+-(BOOL) initSdkWithAppKey:(NSString*) appKey andUserId:(NSString*)userId{
+    return [TongDao initSdkWithSdk:appKey andUserID:userId];
+}
 -(NSString*)generateUserId
 {
     return [TongDao generateUserId];
@@ -291,7 +296,7 @@ static TongDaoUiCore* sharedManager = nil;
         }
         
         
-//        [self addTapClose];
+        //        [self addTapClose];
         
         if (bean.displayTime != nil && bean.displayTime.intValue > 0) {
             long long displaytime = bean.displayTime.intValue * NSEC_PER_SEC;
